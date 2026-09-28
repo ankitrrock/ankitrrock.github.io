@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ankit Anand — Python Backend Developer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#eef0f2;--surface:#fff;--ink:#14202b;--muted:#54626f;--line:#cfd6dc;--accent:#2440e0;--key:#2440e0;--str:#0a7a55;--num:#b4530a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1720;--surface:#17222d;--ink:#e6ebf0;--muted:#98a6b3;--line:#2b3946;--accent:#7f95ff;--key:#8ea2ff;--str:#5fd3a4;--num:#f0a35e}}
+:root[data-theme="dark"]{--bg:#0f1720;--surface:#17222d;--ink:#e6ebf0;--muted:#98a6b3;--line:#2b3946;--accent:#7f95ff;--key:#8ea2ff;--str:#5fd3a4;--num:#f0a35e}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;flex-wrap:wrap}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}
+nav div{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:700;letter-spacing:-.02em}
+.hero p{color:var(--muted);max-width:34em;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:6px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.code{background:var(--surface);border:1px solid var(--line);border-radius:10px;font:400 .86rem/1.65 "IBM Plex Mono",monospace;overflow:hidden}
+.code header{padding:10px 16px;border-bottom:1px solid var(--line);color:var(--muted);display:flex;justify-content:space-between}
+.code header span:last-child{color:var(--str)}
+.code pre{margin:0;padding:16px;overflow-x:auto}
+.k{color:var(--key)}.s{color:var(--str)}.n{color:var(--num)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:32px}
+.job{display:grid;grid-template-columns:200px 1fr;gap:12px 40px;padding-bottom:36px}
+.job .when{color:var(--muted);font-size:.95rem}
+.job h3{font-size:1.3rem;margin-bottom:2px}
+.job .co{color:var(--accent);font-weight:600;margin-bottom:10px}
+.job ul{margin:0;padding-left:1.1em}
+.job li{margin-bottom:6px;max-width:64ch}
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj article{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.proj h3{font-size:1.2rem;margin-bottom:8px}
+.proj p{margin:0 0 14px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font:.78rem "IBM Plex Mono",monospace;padding:3px 9px;border:1px solid var(--line);border-radius:99px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.skills h3{font-size:1.05rem;margin-bottom:8px}
+.skills p{margin:0;color:var(--muted)}
+.contact p{max-width:40em;color:var(--muted);margin:0 0 24px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:820px){.hero,.job,.proj,.skills{grid-template-columns:1fr}.hero{gap:32px;padding-top:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Ankit Anand</b><div><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+
+<div class="hero">
+<div>
+<h1>I build Python backends that replace manual work.</h1>
+<p>Backend developer with 3+ years in Django, REST APIs and data pipelines. At Times Internet I cut a Google Ad Manager tracking process down by 30x with no loss of accuracy.</p>
+<div class="btns"><a class="btn main" href="#contact">Get in touch</a><a class="btn" href="https://github.com/ankitrrock" target="_blank" rel="noopener">GitHub</a></div>
+</div>
+<div class="code" aria-label="Summary as an API response">
+<header><span>GET /developers/ankit-anand</span><span>200 OK</span></header>
+<pre>{
+  <span class="k">"role"</span>: <span class="s">"Python Backend Developer"</span>,
+  <span class="k">"experience_years"</span>: <span class="n">3</span>,
+  <span class="k">"location"</span>: <span class="s">"Delhi, India"</span>,
+  <span class="k">"stack"</span>: [<span class="s">"Django"</span>, <span class="s">"DRF"</span>, <span class="s">"FastAPI"</span>,
+            <span class="s">"PostgreSQL"</span>, <span class="s">"Airflow"</span>, <span class="s">"AWS"</span>],
+  <span class="k">"latest_result"</span>: {
+    <span class="k">"speedup"</span>: <span class="s">"30x"</span>,
+    <span class="k">"kpi_accuracy"</span>: <span class="s">"100%"</span>
+  },
+  <span class="k">"open_to_work"</span>: <span class="n">true</span>
+}</pre>
+</div>
+</div>
+</div>
+
+<section id="work"><div class="wrap">
+<h2>Experience</h2>
+<div class="job">
+<div class="when">Aug 2025 – Apr 2026<br>Noida</div>
+<div><h3>Associate Developer</h3><div class="co">Times Internet</div>
+<ul>
+<li>Built an automated tracking system for Google Ad Manager lines and orders, replacing a long-running manual process. Processing time dropped 30x with 100% KPI accuracy.</li>
+<li>Built a real-time campaign monitoring dashboard (Flask + Jinja) that cut status-check email threads and sped up QA.</li>
+<li>Worked with external platform APIs, validation logic and structured data to keep workflows reliable.</li>
+<li>Used AI-assisted development and cloud-based environments to shorten the path from prototype to deployment.</li>
+</ul></div>
+</div>
+<div class="job">
+<div class="when">Dec 2021 – May 2024<br>Gurugram</div>
+<div><h3>Associate Developer</h3><div class="co">Oodles Technologies · Viral Nation Platform, Secure, NCS Multistage</div>
+<ul>
+<li>Built and maintained backend modules with Python, Django and Django REST Framework across multiple client projects.</li>
+<li>Designed and shipped REST APIs for frontend integration, authentication, business logic and third-party services.</li>
+<li>Worked with PostgreSQL, MySQL, MongoDB and DynamoDB, including SQL troubleshooting and data lake storage.</li>
+<li>Automated multi-step workflows with Apache Airflow, reducing manual intervention.</li>
+<li>Used AWS Lambda, S3 and Azure Key Vault for secure, scalable infrastructure.</li>
+<li>Wrote unit tests, API specs and architecture docs used by frontend, QA and product teams.</li>
+</ul></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Selected work</h2>
+<div class="proj">
+<article><h3>GAM lines &amp; orders tracker</h3><p>Automated a manual Google Ad Manager process. 30x faster, 100% KPI accuracy.</p><div class="tags"><span>Python</span><span>GAM API</span><span>Validation</span></div></article>
+<article><h3>Campaign monitoring dashboard</h3><p>Real-time view of campaign status that replaced status-check email threads.</p><div class="tags"><span>Flask</span><span>Jinja</span></div></article>
+<article><h3>NCS Multistage ETL workflow</h3><p>Airflow pipeline moving Pipedrive data into Snowflake, with webhook-based ingestion.</p><div class="tags"><span>Airflow</span><span>Snowflake</span><span>Webhooks</span></div></article>
+<article><h3>Client REST API platforms</h3><p>Django/DRF services for Viral Nation Platform and Secure: auth, business logic and integrations.</p><div class="tags"><span>Django</span><span>DRF</span><span>PostgreSQL</span></div></article>
+</div>
+<p style="margin-top:24px;color:var(--muted)">More code on <a href="https://github.com/ankitrrock" target="_blank" rel="noopener">github.com/ankitrrock</a>.</p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Backend</h3><p>Python, SQL, Django, Django REST Framework, Flask, FastAPI, REST API design, microservices, authentication</p></div>
+<div><h3>Data</h3><p>PostgreSQL, MySQL, MongoDB, DynamoDB, Snowflake, Apache Airflow, Airbyte, PySpark, ETL design, Redis, Celery</p></div>
+<div><h3>Cloud &amp; tooling</h3><p>AWS (Lambda, S3), Azure Key Vault, Docker, GitHub Actions, CI/CD, Git, Postman, unit and API testing, Linux</p></div>
+</div>
+<p style="margin-top:28px;color:var(--muted)">Also familiar with e-commerce backend patterns (catalogue, cart, orders, payment API integration) and AI tools like Copilot and Cursor.</p>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Contact</h2>
+<p>Looking for a Python/Django backend role. Email is the fastest way to reach me.</p>
+<div class="btns">
+<a class="btn main" href="mailto:ankitnnd@outlook.com">ankitnnd@outlook.com</a>
+<a class="btn" href="https://www.linkedin.com/in/ankit-anand-3b2933188/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/ankitrrock" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="tel:+918982541015">+91 89825 41015</a>
+</div>
+</div></section>
+
+<footer><div class="wrap">Ankit Anand · Delhi, India · B.E., RGPV University</div></footer>
+</body>
+</html>
