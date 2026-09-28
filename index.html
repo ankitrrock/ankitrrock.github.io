@@ -1,74 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ankit Anand — Python Backend &amp; Data Engineer</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
-<style>
-:root{--bg:#eef0f2;--surface:#fff;--ink:#14202b;--muted:#54626f;--line:#cfd6dc;--accent:#2440e0;--key:#2440e0;--str:#0a7a55;--num:#b4530a;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1720;--surface:#17222d;--ink:#e6ebf0;--muted:#98a6b3;--line:#2b3946;--accent:#7f95ff;--key:#8ea2ff;--str:#5fd3a4;--num:#f0a35e}}
-:root[data-theme="dark"]{--bg:#0f1720;--surface:#17222d;--ink:#e6ebf0;--muted:#98a6b3;--line:#2b3946;--accent:#7f95ff;--key:#8ea2ff;--str:#5fd3a4;--num:#f0a35e}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif}
-a{color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;flex-wrap:wrap}
-nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}
-nav div{display:flex;gap:20px;flex-wrap:wrap}
-nav a{color:var(--muted);text-decoration:none;font-weight:600}
-nav a:hover{color:var(--ink)}
-.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:56px 0 72px}
-.hero h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:700;letter-spacing:-.02em}
-.hero p{color:var(--muted);max-width:34em;margin:20px 0 28px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:11px 20px;border-radius:6px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
-.btn.main{background:var(--ink);color:var(--bg)}
-.code{background:var(--surface);border:1px solid var(--line);border-radius:10px;font:400 .86rem/1.65 "IBM Plex Mono",monospace;overflow:hidden}
-.code header{padding:10px 16px;border-bottom:1px solid var(--line);color:var(--muted);display:flex;justify-content:space-between}
-.code header span:last-child{color:var(--str)}
-.code pre{margin:0;padding:16px;overflow-x:auto}
-.k{color:var(--key)}.s{color:var(--str)}.n{color:var(--num)}
-section{padding:56px 0;border-top:1px solid var(--line)}
-section>.wrap>h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:32px}
-.job{display:grid;grid-template-columns:200px 1fr;gap:12px 40px;padding-bottom:36px}
-.job .when{color:var(--muted);font-size:.95rem}
-.job h3{font-size:1.3rem;margin-bottom:2px}
-.job .co{color:var(--accent);font-weight:600;margin-bottom:10px}
-.job ul{margin:0;padding-left:1.1em}
-.job li{margin-bottom:6px;max-width:64ch}
-.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.proj article{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
-.proj h3{font-size:1.2rem;margin-bottom:8px}
-.proj p{margin:0 0 14px;color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tags span{font:.78rem "IBM Plex Mono",monospace;padding:3px 9px;border:1px solid var(--line);border-radius:99px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.skills h3{font-size:1.05rem;margin-bottom:8px}
-.skills p{margin:0;color:var(--muted)}
-.contact p{max-width:40em;color:var(--muted);margin:0 0 24px}
-footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-@media (max-width:820px){.hero,.job,.proj,.skills{grid-template-columns:1fr}.hero{gap:32px;padding-top:32px}}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Ankit Anand — Python Backend & Data Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-<nav><b>Ankit Anand</b><div><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+    <header class="navbar">
+        <div class="wrap nav-container">
+            <a href="#" class="logo">Ankit<span>.Anand()</span></a>
+            <nav class="nav-links">
+                <a href="#work">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="hero">
-<div>
-<h1>I build Python pipelines and automation that replace manual work.</h1>
-<p>Python developer with 3+ years in data pipelines, workflow automation and REST APIs. At Times Internet I cut a Google Ad Manager tracking process down by 30x with no loss of accuracy.</p>
-<div class="btns"><a class="btn main" href="#contact">Get in touch</a><a class="btn" href="https://github.com/ankitrrock" target="_blank" rel="noopener">GitHub</a></div>
-</div>
-<div class="code" aria-label="Summary as an API response">
-<header><span>GET /developers/ankit-anand</span><span>200 OK</span></header>
-<pre>{
-  <span class="k">"role"</span>: <span class="s">"Python Backend &amp; Data Engineer"</span>,
+    <main class="wrap">
+        <section class="hero">
+            <div class="hero-text-block">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span> Open to Roles & Collaborations
+                </div>
+                <h1>I build Python pipelines & automation that replace manual overhead.</h1>
+                <p>Python engineer with 3+ years specializing in data pipelines, workflow automation, and robust REST APIs. At Times Internet, I dropped a core tracking runtime by 30x with absolute KPI precision.</p>
+                <div class="btns">
+                    <a class="btn main" href="#contact">Get in touch</a>
+                    <a class="btn" href="https://github.com/ankitrrock" target="_blank" rel="noopener">
+                        <svg class="icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <div class="code-window" aria-label="Summary as an API response">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="window-title">GET /developers/ankit-anand</span>
+                    <span class="status-pill">200 OK</span>
+                </div>
+                <pre class="code-content"><code>{
+  <span class="k">"role"</span>: <span class="s">"Python Backend & Data Engineer"</span>,
   <span class="k">"experience_years"</span>: <span class="n">3</span>,
   <span class="k">"location"</span>: <span class="s">"Delhi, India"</span>,
   <span class="k">"stack"</span>: [<span class="s">"Airflow"</span>, <span class="s">"Snowflake"</span>, <span class="s">"SQL"</span>,
@@ -78,71 +60,157 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
     <span class="k">"kpi_accuracy"</span>: <span class="s">"100%"</span>
   },
   <span class="k">"open_to_work"</span>: <span class="n">true</span>
-}</pre>
-</div>
-</div>
-</div>
+}</code></pre>
+            </div>
+        </section>
 
-<section id="work"><div class="wrap">
-<h2>Experience</h2>
-<div class="job">
-<div class="when">Aug 2025 – Apr 2026<br>Noida</div>
-<div><h3>Associate Developer</h3><div class="co">Times Internet</div>
-<ul>
-<li>Built an automated tracking system for Google Ad Manager lines and orders, replacing a long-running manual process. Processing time dropped 30x with 100% KPI accuracy.</li>
-<li>Built a real-time campaign monitoring dashboard (Flask + Jinja) that cut status-check email threads and sped up QA.</li>
-<li>Worked with external platform APIs, validation logic and structured data to keep workflows reliable.</li>
-<li>Used AI-assisted development and cloud-based environments to shorten the path from prototype to deployment.</li>
-</ul></div>
-</div>
-<div class="job">
-<div class="when">Dec 2021 – May 2024<br>Gurugram</div>
-<div><h3>Associate Developer</h3><div class="co">Oodles Technologies · Viral Nation Platform, Secure, NCS Multistage</div>
-<ul>
-<li>Built and maintained backend modules with Python, Django and Django REST Framework across multiple client projects.</li>
-<li>Designed and shipped REST APIs for frontend integration, authentication, business logic and third-party services.</li>
-<li>Worked with PostgreSQL, MySQL, MongoDB and DynamoDB, including SQL troubleshooting and data lake storage.</li>
-<li>Automated multi-step workflows with Apache Airflow, reducing manual intervention.</li>
-<li>Used AWS Lambda, S3 and Azure Key Vault for secure, scalable infrastructure.</li>
-<li>Wrote unit tests, API specs and architecture docs used by frontend, QA and product teams.</li>
-</ul></div>
-</div>
-</div></section>
+        <section id="work" class="section">
+            <h2 class="section-heading">// Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="date-badge">Aug 2025 – Apr 2026</span>
+                        <span class="location-text">Noida, IN</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Associate Developer</h3>
+                        <div class="company-tag">Times Internet</div>
+                        <ul class="job-points">
+                            <li>Built an automated tracking system for Google Ad Manager lines and orders, replacing a long-running manual process. Processing time dropped 30x with 100% KPI accuracy.</li>
+                            <li>Built a real-time campaign monitoring dashboard (Flask + Jinja) that cut status-check email threads and sped up QA.</li>
+                            <li>Worked with external platform APIs, validation logic and structured data to keep workflows reliable.</li>
+                            <li>Used AI-assisted development and cloud-based environments to shorten the path from prototype to deployment.</li>
+                        </ul>
+                    </div>
+                </div>
 
-<section id="projects"><div class="wrap">
-<h2>Projects</h2>
-<div class="proj">
-<article><h3>GAM lines &amp; orders tracker</h3><p>Automated a manual Google Ad Manager process at Times Internet. 30x faster, 100% KPI accuracy.</p><div class="tags"><span>Python</span><span>GAM API</span><span>Validation</span></div></article>
-<article><h3>NCS Multistage ETL workflow</h3><p>Airflow pipeline moving Pipedrive data into Snowflake, with webhook-based ingestion.</p><div class="tags"><span>Airflow</span><span>Snowflake</span><span>Webhooks</span></div></article>
-<article><h3><a href="https://github.com/ankitrrock/Airflow" target="_blank" rel="noopener">Airflow ETL Engine</a></h3><p>End-to-end ETL pipelines with task scheduling, dependency management and monitoring.</p><div class="tags"><span>Airflow</span><span>Python</span><span>ETL</span></div></article>
-<article><h3><a href="https://github.com/ankitrrock/Aws_s3_dynamodb_boto3" target="_blank" rel="noopener">AWS Data Integrator</a></h3><p>boto3 utility for secure, asynchronous data transfers between S3 and DynamoDB.</p><div class="tags"><span>boto3</span><span>S3</span><span>DynamoDB</span></div></article>
-<article><h3><a href="https://github.com/ankitrrock/Kafka" target="_blank" rel="noopener">Event-Driven Kafka Streamer</a></h3><p>Real-time event streaming: producing to Kafka topics and structured ingestion.</p><div class="tags"><span>Kafka</span><span>Python</span><span>Streaming</span></div></article>
-<article><h3><a href="https://github.com/ankitrrock/data_ingestion_api" target="_blank" rel="noopener">Automated Data Ingestion API</a></h3><p>Backend service that accepts bulk CSV uploads, validates them and computes summary statistics.</p><div class="tags"><span>Python</span><span>REST API</span><span>CSV</span></div></article>
-</div>
-<p style="margin-top:24px;color:var(--muted)">More code on <a href="https://github.com/ankitrrock" target="_blank" rel="noopener">github.com/ankitrrock</a>.</p>
-</div></section>
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="date-badge">Dec 2021 – May 2024</span>
+                        <span class="location-text">Gurugram, IN</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Associate Developer</h3>
+                        <div class="company-tag">Oodles Technologies</div>
+                        <span class="project-subtext">Viral Nation Platform, Secure, NCS Multistage</span>
+                        <ul class="job-points">
+                            <li>Built and maintained backend modules with Python, Django and Django REST Framework across multiple client projects.</li>
+                            <li>Designed and shipped REST APIs for frontend integration, authentication, business logic and third-party services.</li>
+                            <li>Worked with PostgreSQL, MySQL, MongoDB and DynamoDB, including SQL troubleshooting and data lake storage.</li>
+                            <li>Automated multi-step workflows with Apache Airflow, reducing manual intervention.</li>
+                            <li>Used AWS Lambda, S3 and Azure Key Vault for secure, scalable infrastructure.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="skills"><div class="wrap">
-<h2>Skills</h2>
-<div class="skills">
-<div><h3>Data &amp; automation</h3><p>PostgreSQL, MySQL, MongoDB, DynamoDB, Snowflake, Apache Airflow, Kafka, Airbyte, PySpark, ETL design, Redis, Celery</p></div>
-<div><h3>Backend</h3><p>Python, SQL, Django, Django REST Framework, Flask, FastAPI, REST API design, microservices, authentication</p></div>
-<div><h3>Cloud &amp; tooling</h3><p>AWS (Lambda, S3), Azure Key Vault, Docker, GitHub Actions, CI/CD, Git, Postman, unit and API testing, Linux</p></div>
-</div>
-<p style="margin-top:28px;color:var(--muted)">Also familiar with e-commerce backend patterns (catalogue, cart, orders, payment API integration) and AI tools like Copilot and Cursor.</p>
-</div></section>
+        <section id="projects" class="section">
+            <div class="projects-header">
+                <h2 class="section-heading">// Featured Projects</h2>
+                <div class="filter-controls" id="filter-container">
+                    <button class="filter-btn active" data-filter="all">All Ecosystems</button>
+                    <button class="filter-btn" data-filter="Python">Python Core</button>
+                    <button class="filter-btn" data-filter="Airflow">Airflow Orchestration</button>
+                    <button class="filter-btn" data-filter="AWS">AWS Cloud</button>
+                </div>
+            </div>
 
-<section id="contact" class="contact"><div class="wrap">
-<h2>Contact</h2>
-<p>Looking for data engineering, automation or Python backend roles. Email is the fastest way to reach me.</p>
-<div class="btns">
-<a class="btn main" href="mailto:ankitnnd@outlook.com">ankitnnd@outlook.com</a>
-<a class="btn" href="https://www.linkedin.com/in/ankit-anand-3b2933188/" target="_blank" rel="noopener">LinkedIn</a>
-<a class="btn" href="https://github.com/ankitrrock" target="_blank" rel="noopener">GitHub</a>
-<a class="btn" href="tel:+918982541015">+91 89825 41015</a>
-</div>
-</div></section>
+            <div class="projects-layout" id="projects-grid">
+                <article class="modern-card" data-tags="Python">
+                    <div class="card-inner">
+                        <h3>GAM lines &amp; orders tracker</h3>
+                        <p>Automated a manual Google Ad Manager process at Times Internet. Engineered for high-throughput scaling.</p>
+                        <div class="card-tags">
+                            <span>Python</span><span>GAM API</span><span>Validation</span>
+                        </div>
+                    </div>
+                </article>
 
-<footer><div class="wrap">Ankit Anand · Delhi, India · B.E., RGPV University</div></footer>
+                <article class="modern-card" data-tags="Airflow">
+                    <div class="card-inner">
+                        <h3>NCS Multistage ETL workflow</h3>
+                        <p>Airflow pipeline moving live transactional Pipedrive records into Snowflake, optimized using webhook ingestion.</p>
+                        <div class="card-tags">
+                            <span>Airflow</span><span>Snowflake</span><span>Webhooks</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="modern-card" data-tags="Airflow,Python">
+                    <a href="https://github.com/ankitrrock/Airflow" target="_blank" rel="noopener" class="card-anchor">
+                        <div class="card-inner">
+                            <h3>Airflow ETL Engine <svg class="inline-arrow" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></h3>
+                            <p>End-to-end robust production ETL pipelines built for tasks handling complex job dependency chains.</p>
+                            <div class="card-tags">
+                                <span>Airflow</span><span>Python</span><span>ETL</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="modern-card" data-tags="AWS">
+                    <a href="https://github.com/ankitrrock/Aws_s3_dynamodb_boto3" target="_blank" rel="noopener" class="card-anchor">
+                        <div class="card-inner">
+                            <h3>AWS Data Integrator <svg class="inline-arrow" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></h3>
+                            <p>Asynchronous programmatic interactions mapping Amazon Web Services cloud assets via secure boto3 clients.</p>
+                            <div class="card-tags">
+                                <span>AWS</span><span>DynamoDB</span><span>S3</span><span>Boto3</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-heading">// Technical Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages & Core</h4>
+                    <p>Python, SQL, Shell Scripting, REST Architecture</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Frameworks</h4>
+                    <p>Apache Airflow, PySpark, Kafka, Airbyte, ETL Engineering</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases / Engine</h4>
+                    <p>Snowflake, PostgreSQL, MongoDB, DynamoDB, MySQL</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend Stack</h4>
+                    <p>Django, FastAPI, DRF, Flask, Asyncpg</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & Cloud-Native</h4>
+                    <p>AWS (S3, Lambda), Azure Key Vault, Docker, GitHub Actions</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="footer-block">
+            <div class="footer-content">
+                <h2>Let's build reliable backend systems together.</h2>
+                <p>Currently open to new remote opportunities and localized opportunities in Delhi NCR.</p>
+                <div class="footer-links">
+                    <a href="mailto:ankitnnd@outlook.com" class="footer-cta">ankitnnd@outlook.com</a>
+                    <div class="social-row">
+                        <a href="https://linkedin.com/in/ankit-anand-3b2933188" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/ankitrrock" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2026 Ankit Anand. Engineered minimal.</div>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
